@@ -1,24 +1,40 @@
 ﻿using System.Threading;
-using System.Threading.Tasks;
 using Confluent.Kafka;
+
+#nullable enable
 
 namespace KafkaSamples
 {
-    public class KafkaConsumer
+    public class KafkaConsumer<TKey, TValue>
     {
-        public static async Task<Message<TKey, TValue>> ListenAsync<TKey, TValue>(
-            string bootstrapServers, 
-            CancellationToken token = default)
+        private readonly ConsumerConfig _config;
+        
+        /// <summary>
+        /// Initialize a new KafkaConsumer object.
+        /// </summary>
+        /// <param name="groupId">GroupId should be given, otherwise it will throw an exception.</param>
+        /// <param name="server">Server should be given to specify which server should we connect to.</param>
+        public KafkaConsumer(string groupId, string server)
         {
-            ConsumerConfig config = new ConsumerConfig
+            _config = new ConsumerConfig
             {
-                BootstrapServers = bootstrapServers,
-                EnableAutoCommit = true
+                BootstrapServers = server,
+                GroupId = groupId
             };
-
-            var builder = new ConsumerBuilder<TKey, TValue>(config);
+        }
+        
+        /// <summary>
+        /// Blocks until the next message is received from the consumer poll.
+        /// </summary>
+        /// <param name="token">For cancellation, optional.</param>
+        /// <returns>The message object returned by the Consumer.</returns>
+        public Message<TKey, TValue> NextMessage(TopicPartitionOffset tpa, CancellationToken token = default)
+        {
+            var builder = new ConsumerBuilder<TKey, TValue>(_config);
 
             using var consumer = builder.Build();
+            
+            consumer.Assign(tpa);
 
             while (true)
             {
