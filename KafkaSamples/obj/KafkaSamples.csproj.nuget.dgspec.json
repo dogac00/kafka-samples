@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dogac.akyildiz\\source\\repos\\KafkaSamples\\KafkaSamples\\KafkaSamples.csproj": {}
+    "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dogac.akyildiz\\source\\repos\\KafkaSamples\\KafkaSamples\\KafkaSamples.csproj": {
+    "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dogac.akyildiz\\source\\repos\\KafkaSamples\\KafkaSamples\\KafkaSamples.csproj",
+        "projectUniqueName": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
         "projectName": "KafkaSamples",
-        "projectPath": "C:\\Users\\dogac.akyildiz\\source\\repos\\KafkaSamples\\KafkaSamples\\KafkaSamples.csproj",
+        "projectPath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
         "packagesPath": "C:\\Users\\dogac.akyildiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dogac.akyildiz\\source\\repos\\KafkaSamples\\KafkaSamples\\obj\\",
+        "outputPath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dogac.akyildiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

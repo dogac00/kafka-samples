@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Dk2bjw1cMVACdEazTkaurWA5cMg+Lc0bP5HjZKSKLfclCOqbM64VUNjcJ8r7CEEJ6NFIZ7n2HcT9LREjVDJFMQ==",
+  "dgSpecHash": "NZ0xkUgZsQ8nMQw3Iw8LSoszJ+qRp0FV1hvXrJfsMEXw1mO6DDq79W9n5GUsRSKgAlY+MrYWa8/BN3mnCv8awg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dogac.akyildiz\\source\\repos\\KafkaSamples\\KafkaSamples\\KafkaSamples.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dogac.akyildiz\\.nuget\\packages\\confluent.kafka\\1.5.0\\confluent.kafka.1.5.0.nupkg.sha512",
+    "C:\\Users\\dogac.akyildiz\\.nuget\\packages\\librdkafka.redist\\1.5.0\\librdkafka.redist.1.5.0.nupkg.sha512",
+    "C:\\Users\\dogac.akyildiz\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
