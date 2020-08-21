@@ -35,16 +35,13 @@ namespace KafkaSamples
             using var consumer = builder.Build();
             
             consumer.Assign(tpa);
+            
+            var consumeResult = consumer.Consume(token);
 
-            while (true)
-            {
-                var consumeResult = consumer.Consume(token);
+            if (consumeResult.IsPartitionEOF)
+                return default;
 
-                if (consumeResult.IsPartitionEOF)
-                    return default;
-
-                return consumeResult.Message;
-            }
+            return consumeResult.Message;
         }
     }
 }
