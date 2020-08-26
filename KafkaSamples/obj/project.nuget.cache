@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NZ0xkUgZsQ8nMQw3Iw8LSoszJ+qRp0FV1hvXrJfsMEXw1mO6DDq79W9n5GUsRSKgAlY+MrYWa8/BN3mnCv8awg==",
+  "dgSpecHash": "1Wa3UN0xfltLwyN3TUh/TlgUPUFwJT3+GO9RcUfr9W2nG2JNLJYIxQuumEKlUEqNXozE32YwbgY3Vgdk0vDBIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
+  "projectFilePath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\NEW\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dogac.akyildiz\\.nuget\\packages\\confluent.kafka\\1.5.0\\confluent.kafka.1.5.0.nupkg.sha512",
     "C:\\Users\\dogac.akyildiz\\.nuget\\packages\\librdkafka.redist\\1.5.0\\librdkafka.redist.1.5.0.nupkg.sha512",

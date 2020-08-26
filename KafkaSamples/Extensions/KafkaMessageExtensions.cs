@@ -6,7 +6,7 @@ namespace KafkaSamples.Extensions
 {
     public static class MessageExtensions
     {
-        public static T GetHeader<T>(this Message<string, string> message, string key)
+        public static T GetHeader<T>(this Message<string, string> message, string key) where T : unmanaged
         {
             foreach (var header in message.Headers)
             {
@@ -21,7 +21,7 @@ namespace KafkaSamples.Extensions
             throw new Exception("Header not found.");
         }
         
-        public static void SetHeader<T>(this Message<string, string> message, string key, T value)
+        public static void SetHeader<T>(this Message<string, string> message, string key, T value) where T : unmanaged
         {
             byte[] bytes = new byte[Unsafe.SizeOf<T>()];
 

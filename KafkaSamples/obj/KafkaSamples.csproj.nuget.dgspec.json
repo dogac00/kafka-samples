@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj": {}
+    "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\NEW\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj": {
+    "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\NEW\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
+        "projectUniqueName": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\NEW\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
         "projectName": "KafkaSamples",
-        "projectPath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
+        "projectPath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\NEW\\Kafka-Samples\\KafkaSamples\\KafkaSamples.csproj",
         "packagesPath": "C:\\Users\\dogac.akyildiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\Kafka-Samples\\KafkaSamples\\obj\\",
+        "outputPath": "C:\\Users\\dogac.akyildiz\\Desktop\\Kafka-Samples\\NEW\\Kafka-Samples\\KafkaSamples\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dogac.akyildiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
