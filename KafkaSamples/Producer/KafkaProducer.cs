@@ -19,6 +19,11 @@ namespace KafkaSamples.Producer
             _producer = new ProducerBuilder<TKey, TValue>(config).Build();
         }
 
+        public KafkaProducer(ProducerConfig config)
+        {
+            _producer = new ProducerBuilder<TKey, TValue>(config).Build();
+        }
+
         public void Dispose()
         {
             _producer?.Dispose();

@@ -1,5 +1,5 @@
-﻿using System;
-using Confluent.Kafka;
+﻿using KafkaSamples.Consumer;
+using System;
 
 namespace KafkaSamples
 {
@@ -7,25 +7,16 @@ namespace KafkaSamples
     {
         static void Main(string[] args) 
         {
-            // These should be taken from a configuration file
-            // This will be edited
-            const string bootstrapServers = "YOUR_SERVER_NAME";
-            const string groupId = "YOUR_GROUP_ID";
-            
-            var consumer = new KafkaConsumer<string, string>(groupId, bootstrapServers);
+            var consumer = new KafkaConsumer<string, string>();
 
-            var message = consumer.NextMessage(new TopicPartitionOffset("YOUR_TOPIC", 0, 0));
+            consumer.Subscribe("my-topic-to-subscribe");
 
-            Console.WriteLine(message);
-        }
-    }
-    
-    public class Sample {
-        public int SumOfFirstThreeElements(int [] arr) {
-            int sum = 0;
-            for (int i = 0; i < 3; i++)
-                sum += arr[i];
-            return sum;
+            var result = consumer.Consume();
+
+            if (result != null)
+                consumer.CommitResult(result);
+
+            Console.WriteLine(result?.Message);
         }
     }
 }
