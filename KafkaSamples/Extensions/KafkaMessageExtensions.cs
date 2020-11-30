@@ -29,5 +29,34 @@ namespace KafkaSamples.Extensions
 
             message.Headers.Add(key, bytes);
         }
+        
+        public static Message<TKey, TValue> AsGeneric<TKey, TValue>(this Message<byte[], byte[]> message,
+            IDeserializer<TKey> keyDeserializer,
+            IDeserializer<TValue> valueDeserializer)
+        {
+            if (message == null)
+            {
+                return new Message<TKey, TValue>
+                {
+                    Key = default,
+                    Value = default
+                };
+            }
+
+            var key = keyDeserializer.Deserialize(message.Key.AsSpan(),
+                false,
+                new SerializationContext());
+            var value = valueDeserializer.Deserialize(message.Value.AsSpan(),
+                false,
+                new SerializationContext());
+            
+            return new Message<TKey, TValue>
+            {
+                Key = key,
+                Value = value,
+                Headers = message.Headers,
+                Timestamp = message.Timestamp
+            };
+        }
     }
 }
